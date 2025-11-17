@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects and its Properties</h2>
+
+    <p>There are two ways to access an object property:</p>
+    <p>1. person.propertyName</p>
+    <p>2. person["propertyName"]</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+      var person = {
+        firstName: "Farzeen",
+        age: 14,
+      };
+
+      document.getElementById("demo").innerHTML = "I am " + person.firstName + ". I am " + person.age + " years old.";
+
+      document.getElementById("demo2").innerHTML = "I am " + person["firstName"] + ". I am " + person["age"] + " years old.";
+    </script>
+  </body>
+</html>
