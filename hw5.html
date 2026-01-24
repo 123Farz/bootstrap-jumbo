@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Mapping and Sorting</title>
+</head>
+<body>
+
+<h2>Array Mapping and Sorting</h2>
+
+<p id="original"></p>
+<p id="mapped"></p>
+<p id="ascending"></p>
+<p id="descending"></p>
+
+<script>
+  let points = [4, 9, 2, 7, 1];
+
+  let originalText = "Original Array: " + points;
+  document.getElementById("original").innerHTML = originalText;
+
+  let mappedPoints = points.map(function(value) {
+    let newValue = eval(value * 3);
+    return newValue;
+  });
+
+  let mappedText = "Mapped Array: " + mappedPoints;
+  document.getElementById("mapped").innerHTML = mappedText;
+
+  let ascendingPoints = mappedPoints.sort(function(a, b) {
+    return a - b;
+  });
+
+  let ascendingText = "Ascending Order: " + ascendingPoints;
+  document.getElementById("ascending").innerHTML = ascendingText;
+
+  let descendingPoints = ascendingPoints.slice().reverse();
+
+  let descendingText = "Descending Order: " + descendingPoints;
+  document.getElementById("descending").innerHTML = descendingText;
+</script>
+
+</body>
+</html>
