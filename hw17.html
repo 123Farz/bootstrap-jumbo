@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank App</title>
+</head>
+
+<body>
+
+<h2>Bank App</h2>
+
+<input type="text" id="name" placeholder="Description"><br><br>
+<input type="number" id="amount" placeholder="Amount"><br><br>
+
+<select id="type">
+    <option value="">Select</option>
+    <option>Income</option>
+    <option>Expense</option>
+</select><br><br>
+
+<button onclick="check()">Add</button>
+
+<p id="msg"></p>
+
+<script>
+function check(){
+
+let name = document.getElementById("name").value;
+let amount = document.getElementById("amount").value;
+let type = document.getElementById("type").value;
+
+if(name=="" || amount=="" || type==""){
+    document.getElementById("msg").innerHTML="Fill all fields!";
+}
+else if(amount<=0){
+    document.getElementById("msg").innerHTML="Amount must be greater than 0";
+}
+else{
+    document.getElementById("msg").innerHTML="Transaction Added!";
+}
+
+}
+</script>
+
+</body>
+</html>
