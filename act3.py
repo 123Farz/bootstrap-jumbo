@@ -1,28 +1,16 @@
-city=input("Enter your city name:")
-temp=float(input("Enter the temperature in your country:"))
+def add(x,y):
+    return x+y
+def subtract(x,y):
+    return x-y
+def multiply(x,y):
+    return x*y
+def divide(x,y):
+    return x/y
 
-if temp >40:
-    print("Warning it it very hot today")
+num1= int(input("enter number 1:"))
+num2= int(input("enter number 2:"))
 
-if temp>25:
-    print("Have a nice day")
-else:
-    print("Grab a jacket")
-
-if temp>45:
-    print("Weather:Scorching hot")
-elif temp>35:
-    print("Weather:Nice and Sunny")
-elif temp>25:
-    print("Weather:A little cold")
-else:
-    print("Weather: Very chilly")
-
-import datetime as dt
-import calendar as c
-
-now=dt.datetime.now()
-print("City:", now)
-print("Time:", now)
-
-print(c.calendar(now.year))
+print("Sum:", add(num1,num2))
+print("Difference:", subtract(num1,num2))
+print("Product:", multiply(num1,num2))
+print("Quotient:", divide(num1,num2))
