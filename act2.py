@@ -1,14 +1,14 @@
-def recur_factorial(n):
-    if n==1:
-        return 1
-    else:
-        return n*recur_factorial(n-1)
+class student:
+    age = 12
+    name = "Bob"
 
-num = int(input("Enter a number"))
+    def introduction(self):
+        print("Hi I am a student")
 
-if num<0:
-    print("Factorials do not exist for negaive numbers")
-elif num == 0 :
-    print("The factorial for 0 is 1")
-else:
-    print("The factorial of", num, "is", recur_factorial(num))
+    def details(self):
+        print("My name is", self.name)
+        print("I am", self.age)
+
+ob = student()
+ob.introduction()
+ob.details()
